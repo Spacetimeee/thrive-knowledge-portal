@@ -69,6 +69,9 @@ plugins:
     order: 40
   - source: github:quartz-community/table-of-contents
     enabled: true
+    options:
+      # main sections only (##); story-level ### headlines crowd the sidebar
+      maxDepth: 2
     order: 50
     layout:
       position: right
