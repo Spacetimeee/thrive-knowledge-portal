@@ -84,4 +84,8 @@ default config:
 - `ignorePatterns` excludes `**/_template.md` (vault scaffolding) and `.obsidian`
 - `analytics: null` (flip to Google Analytics by setting a `gtag` provider if wanted)
 - `cname` plugin disabled (GitHub Pages-only)
+- `latex` plugin disabled, and [quartz.ts](quartz.ts) adds an `EscapeDollarAmounts`
+  transformer: the obsidian-flavored-markdown plugin unconditionally parses `$...$` as
+  inline math, which mangles paragraphs containing two dollar amounts (`$1B … $61M`).
+  The transformer escapes `$` before digits pre-parse; the vault contains no real math.
 - footer links to the vault source repo

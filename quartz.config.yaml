@@ -81,8 +81,10 @@ plugins:
   - source: github:quartz-community/description
     enabled: true
     order: 70
+  # Disabled: vault prose is full of literal dollar amounts ($1B, $61M …) which
+  # inline-math parsing mangles; the vault never contains actual math notation.
   - source: github:quartz-community/latex
-    enabled: true
+    enabled: false
     options:
       renderEngine: katex
     order: 80
