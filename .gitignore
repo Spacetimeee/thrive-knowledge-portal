@@ -11,3 +11,10 @@ private/
 replit.nix
 .quartz/
 quartz/cli/tui/dist/
+
+# site-specific: content is provided at build time from thrive-incubator/k12-synthesis
+content/*
+!content/.gitkeep
+k12-synthesis/
+.firebase/
+firebase-debug.log
